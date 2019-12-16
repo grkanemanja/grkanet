@@ -1,0 +1,35 @@
+﻿<!DOCTYPE HTML>
+<html>
+<head>
+    <title>@ViewBag.Title</title>
+    <link rel="icon" type="image/x-icon" href="~/favicon.ico" />
+    <meta name="keywords" content="@ViewBag.Keywords" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    @Styles.Render("~/Content/css")
+    <script src="~/Scripts/jquery.min.js" rel="stylesheet"></script>
+    <script src="~/Scripts/jquery.scrollex.min.js" rel="stylesheet"></script>
+    <script src="~/Scripts/jquery.scrolly.min.js" rel="stylesheet"></script>
+    <script src="~/Scripts/skel.min.js" rel="stylesheet"></script>
+    <script src="~/Scripts/util.js" rel="stylesheet"></script>
+    <script src="~/Scripts/main.js" rel="stylesheet"></script>
+</head>
+<body>
+    <div>
+        @{
+            Html.RenderPartial("_Navigacioni");
+        }
+
+        @RenderBody()
+        
+        @RenderSection("kontakt", required:false)
+        <footer id="footer">
+            <div class="copyright">
+                <p>&copy; NEMANJA GRKOVIĆ ALL RIGHTS RESERVED 2019  </p>
+            </div>
+        </footer>
+
+</body>
+</html>
+
+
